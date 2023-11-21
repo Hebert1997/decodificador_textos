@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decodificador de textos</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>   
+        <main>             
+                        
+            <div class="conteudo">
+                <div>
+                    <img src="assets/logo_alura.png" alt="Logo da alura no cor azul" class="logo-alura">
+                </div>
+                <section class="entrada-dados">
+                    
+                    <textarea name="entrada-dado-texto" id="inputTexto" maxlength="250" placeholder="Digite seu texto" class="entrada-dado-texto"></textarea>
+
+                    <div class="entrada-dados-aviso">
+                        <img src="assets/Vector.png" alt="vetor">
+                        <p>Apenas letras minúsculas e sem acento.</p>
+                    </div>
+
+                    <div class="botoes">
+                        <button class="botoes-criptografar" onclick="btnCriptografar()">Criptografar</button>
+                        <button class="botoes-descriptografar">Descriptografar</button>
+                    </div> 
+
+                </section>
+
+                <section class="saida-dados">
+                    <textarea name="saida-dado-texto" id="outputTexto" maxlength="250" placeholder="Digite seu texto" class="entrada-dado-texto"></textarea>
+                    <img src="assets/falta_de_texto.png" id="saida-dados-imagem" alt="" class="saida-dados-imagem">
+
+                    <div class="saida-dados-paragrafos">
+                        <p class="saida-dados-paragro-superior">Nenhuma mensagem encontrada</p>
+                        <p class="saida-dados-paragro-inferior">Digite um texto que você deseja criptografar ou descriptografar</p>
+                    </div>
+                    
+                </section>
+                </main>
+            </div>
+            <script src="script/app.js"></script>
+    </body>
+</html>
