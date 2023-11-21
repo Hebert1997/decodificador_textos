@@ -1,5 +1,6 @@
 var input = document.querySelector("#inputTexto")
-var output = document.querySelector("#outputTexto")
+var outputText = document.querySelector("#outputTexto")
+var saidaDados = document.querySelector("#saida-dados")
 
 var matrizCode = [
     ["e","enter"],
@@ -12,7 +13,6 @@ var matrizCode = [
 function btnCriptografar(){
     var textoCriptografado = input.value;   
     criptografar(textoCriptografado);
-    
 }
 
 function criptografar(textoCriptografado){
@@ -22,4 +22,9 @@ function criptografar(textoCriptografado){
             var novoTexto = textoCriptografado.replaceAll(matrizCode[i][0],matrizCode[i][1]);             
         }
     }
+}
+
+function apagaQuadro(){
+    saidaDados.style.cssText = 
+    "display: none";
 }
