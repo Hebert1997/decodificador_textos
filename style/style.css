@@ -6,14 +6,14 @@
 body{
     height: 100vh;
     box-sizing: border-box;
-    background-color: #9EB8D9;
+    background-color: #FF9209;
 }
 .logo-alura{
     margin-top: 30%;
 }
 .conteudo{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .entrada-dados{
     display: flex;
@@ -26,14 +26,12 @@ body{
     font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #0A3871;
     height: 50vh;
 }
 textarea{
     resize: none;
     background-color: transparent;
     border: none;
-    height: 100vh;
 }
 textarea:focus, input:focus {
     box-shadow: 0;
@@ -41,7 +39,7 @@ textarea:focus, input:focus {
 }
 .entrada-dados-aviso{
     display: flex;
-    color: #495057;
+    color: #2B3499;
     font-size: 0.75rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;    
@@ -54,7 +52,7 @@ textarea:focus, input:focus {
 .botoes-criptografar{
     border: 0px solid;
     border-radius: 24px;
-    background-color: #0A3871;
+    background-color: #2B3499;
     padding: 2rem 8rem;
     text-align: center;
     text-decoration: none;
@@ -64,13 +62,13 @@ textarea:focus, input:focus {
     font-weight: 400;
 }
 .botoes-descriptografar{
-    border: 1px solid #0A3871;
+    border: 1px solid #FF9209;
     border-radius: 24px;
-    background-color: #D8DFE8;
+    background-color: #FF6C22;
     padding: 2rem 7rem;
     text-align: center;
     text-decoration: none;
-    color: #0A3871;
+    color: white;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -78,31 +76,80 @@ textarea:focus, input:focus {
 .saida-dados{
     display: flex;
     flex-direction: column;
-    background-color: #EEF5FF;
+    background-color: #FFD099;
     border-radius: 32px;
     margin-top: 2%;
-}
-.saida-dados-paragrafos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 2%;
 }
 .saida-dados-imagem{
     margin-top: 40%;
 }
-.saida-dados-paragro-superior{
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;    
-    font-size: 1.5rem;
-    width: 21rem;
-    text-align: center;
-}
-.saida-dados-paragro-inferior{
+.saida-dados-textos{
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;    
-    font-size: 1rem;
+    font-size: 1.35rem;
     width: 21rem;
-    text-align: center; 
+    text-align: center;
+}
+
+@media (max-width: 769px ){
+    .conteudo{
+        flex-direction: column;
+    }
+    .logo-alura{
+        margin-top: 3.5%;
+    }
+    .botoes{
+        justify-content: space-between;
+        gap: 15%;
+        margin: 2%;
+    }
+    .saida-dados{
+        margin-top: 0%;
+    }
+    .saida-dados-imagem{
+        display: none;
+    }
+    .saida-dados-textos{
+        width: auto;
+    }
+}
+@media (max-width: 375px){
+    
+    .logo-alura{
+        width: 25%;
+        margin-top: 2%;
+    }
+    .entrada-dados{
+        margin-top: 0%;
+    }
+    .entrada-dado-texto{
+        width: min-content;   
+    }
+    .botoes{
+        flex-direction: column;
+        gap: 8px;
+    }
+    .botoes-criptografar{
+        padding: 1.5rem;
+        width: 215%;
+    }
+    .botoes-descriptografar{
+        padding: 1.5rem;
+        width: 215%;
+    }
+    .imagem-vetor{
+        width: 13%;
+        height: 10%;
+    }
+    .saida-dados{
+        margin-left: 1%;
+        margin-bottom: 5%;
+        margin-top: 1%;
+        width: 93%;
+    }
+    .saida-dados-textos{
+        padding: 15px;
+    }
 }
